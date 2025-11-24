@@ -163,7 +163,4 @@ Authorization: Bearer <JWT_TOKEN>
 
 *(Replace with your actual screenshots in the `screenshots` folder)*
 
----
-
----
 
