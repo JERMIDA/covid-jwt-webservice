@@ -1,0 +1,223 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* App.css: Modern, attractive, responsive COVID UI with new color scheme */
+.covid-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f7971e 0%, #ffd200 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.covid-container {
+  background: rgba(255,255,255,0.90);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  border-radius: 24px;
+  max-width: 500px;
+  width: 100%;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.covid-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #ffe06644;
+}
+
+.covid-button-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.covid-btn {
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #ffe06633;
+}
+.covid-btn.primary {
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+  color: #222;
+}
+.covid-btn.primary:hover {
+  background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+.covid-btn.danger {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  color: #fff;
+}
+.covid-btn.danger:hover {
+  background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.covid-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.covid-card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 16px;
+  padding: 1.2rem 0.7rem;
+  text-align: center;
+  box-shadow: 0 4px 16px 0 rgba(31,38,135,0.10);
+  transition: transform 0.18s, box-shadow 0.18s;
+  animation: popIn 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.covid-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+}
+
+.covid-card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #b26a00;
+  font-weight: 500;
+}
+.covid-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7971e;
+  margin: 0;
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .covid-container {
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+  }
+  .covid-header {
+    font-size: 1.3rem;
+  }
+  .covid-card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LoginForm: Attractive, modern, responsive input styles */
+.login-container {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 2rem auto;
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(255, 200, 55, 0.13);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #b26a00;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.login-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ffd200;
+  background: #fffbe6;
+  color: #b26a00;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #ffe06633;
+}
+.login-input:focus {
+  border: 1.5px solid #f7971e;
+  box-shadow: 0 2px 8px #ffd20055;
+  background: #fffde7;
+}
+.login-btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #ffe06633;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #ffd20044;
+}
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+}
