@@ -165,29 +165,5 @@ Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-## **Contributing**
-
-1. Fork the repository.  
-2. Create a feature branch:
-
-```bash
-git checkout -b feature/branch-name
-```
-
-3. Commit your changes with clear messages:
-
-```bash
-git add .
-git commit -m "Add feature description"
-```
-
-4. Push your branch:
-
-```bash
-git push origin feature/branch-name
-```
-
-5. Open a Pull Request to merge into `main`.
-
 ---
 
