@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import axios from "axios";
 import LoginForm from "./components/LoginForm";
@@ -60,13 +59,10 @@ function App() {
     </div>
   );
 }
-
 // Helper function
 const formatTitle = (key) => {
   return key
     .replace(/([A-Z])/g, " $1")
     .replace(/^./, (str) => str.toUpperCase());
 };
-
-
 export default App;
