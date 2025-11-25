@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 const USER = {
   username: "student",
