@@ -158,5 +158,5 @@ Authorization: Bearer <JWT_TOKEN>
 ## **Screenshots**
 
 - **Login Page:** ![Login](frontend/src/assets/login.png)  
-- **COVID Stats Display:** ![Stats](frontend/src/assetscovid-cards.png)  
+- **COVID Stats Display:** ![Stats](frontend/src/assets/covid-cards.png)  
 - **JWT Token Example:** ![Token](frontend/src/assets/token.png)
