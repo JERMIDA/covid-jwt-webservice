@@ -3,7 +3,6 @@
 A secure web application demonstrating **web services integration and security** using **JWT authentication**.  
 The project fetches global COVID-19 data from an external REST API, transforms it, and displays it in a **responsive, user-friendly frontend**.
 
----
 
 ## **Features**
 
@@ -15,7 +14,6 @@ The project fetches global COVID-19 data from an external REST API, transforms i
 - Error handling and logging
 - Logout functionality
 
----
 
 ## **Technologies Used**
 
@@ -23,7 +21,7 @@ The project fetches global COVID-19 data from an external REST API, transforms i
 - **Frontend:** React, Vite, Axios, CSS Grid/Flex for responsive layout  
 - **Other Tools:** Git & GitHub for version control, Postman for API testing
 
----
+
 
 ## **Project Structure**
 
@@ -80,7 +78,6 @@ node server.js
 
 Server will run on: `http://localhost:5000`
 
----
 
 ### **Frontend**
 
@@ -138,22 +135,19 @@ Body:
 
 ### **Get COVID Data (Protected)**
 
-```
 GET /data/covid
 Headers:
 Authorization: Bearer <JWT_TOKEN>
-```
 
 - Returns transformed global COVID-19 statistics.
 
----
 
 ## **Error Handling & Logging**
 
 - Backend logs all requests to `backend/logs/app.log`.  
 - Frontend alerts the user if login or data fetch fails.
 
----
+
 
 ## **Screenshots**
 
