@@ -157,37 +157,6 @@ Authorization: Bearer <JWT_TOKEN>
 
 ## **Screenshots**
 
-- **Login Page:** ![Login](screenshots/login.png)  
-- **COVID Stats Display:** ![Stats](screenshots/covid-cards.png)  
-- **JWT Token Example:** ![Token](screenshots/token.png)  
-
-*(Replace with your actual screenshots in the `screenshots` folder)*
-
----
-
-## **Contributing**
-
-1. Fork the repository.  
-2. Create a feature branch:
-
-```bash
-git checkout -b feature/branch-name
-```
-
-3. Commit your changes with clear messages:
-
-```bash
-git add .
-git commit -m "Add feature description"
-```
-
-4. Push your branch:
-
-```bash
-git push origin feature/branch-name
-```
-
-5. Open a Pull Request to merge into `main`.
-
----
-
+- **Login Page:** ![Login](assets/login.png)  
+- **COVID Stats Display:** ![Stats](assets/covid-cards.png)  
+- **JWT Token Example:** ![Token](assets/token.png)

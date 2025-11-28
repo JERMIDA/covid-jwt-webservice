@@ -6,7 +6,7 @@ const USER = {
   password: "123456"  // plain text for simplicity
 };
 
-exports.login = (req, res) => {
+export const login = (req, res) => {
   const { username, password } = req.body;
 
   if (username !== USER.username) {
@@ -17,7 +17,7 @@ exports.login = (req, res) => {
     return res.status(401).json({ error: "Invalid password" });
   }
 
-  const token = require("jsonwebtoken").sign(
+  const token = jwt.sign(
     { username },
     process.env.JWT_SECRET,
     { expiresIn: "1h" }
