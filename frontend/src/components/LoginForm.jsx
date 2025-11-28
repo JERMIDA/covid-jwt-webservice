@@ -1,42 +1,28 @@
-import { useState } from "react";
-import axios from "axios";
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
-const LoginForm = ({ setToken }) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const login = async () => {
-    try {
-      const res = await axios.post("http://localhost:5000/auth/login", {
-        username,
-        password,
-      });
-      setToken(res.data.token);
-    } catch (err) {
-      alert("Invalid username or password",err);
-    }
-  };
-
-  return (
-    <div className="login-container">
-      <h3 className="login-title">Login</h3>
-      <input
-        className="login-input"
-        placeholder="Username"
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        className="login-input"
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button className="login-btn" onClick={login}>
-        Login
-      </button>
-    </div>
-  );
+const USER = {
+  username: "student",
+  password: "123456"  // plain text for simplicity
 };
 
+exports.login = (req, res) => {
+  const { username, password } = req.body;
 
-export default LoginForm;
+  if (username !== USER.username) {
+    return res.status(401).json({ error: "Invalid username" });
+  }
+
+  if (password !== USER.password) {
+    return res.status(401).json({ error: "Invalid password" });
+  }
+
+  const token = require("jsonwebtoken").sign(
+    { username },
+    process.env.JWT_SECRET,
+    { expiresIn: "1h" }
+  );
+
+  res.json({ message: "Login successful", token });
+};
+
