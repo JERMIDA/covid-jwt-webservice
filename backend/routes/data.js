@@ -1,13 +1,10 @@
-const express = require("express");
 
-const auth = require("../middleware/authMiddleware");
-const { getCovidData } = require("../controllers/dataController");
-
-console.log("[DEBUG] typeof auth:", typeof auth);
-console.log("[DEBUG] typeof getCovidData:", typeof getCovidData);
+import express from "express";
+import auth from "../middleware/authMiddleware.js";
+import { getCovidData } from "../controllers/dataController.js";
 
 const router = express.Router();
 
 router.get("/covid", auth, getCovidData);
 
-module.exports = router;
+export default router;
